@@ -5,13 +5,13 @@ module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
     'script!foundation-sites/dist/foundation.min.js',
-    './app/app.jsx',
+    './app/app.jsx'
   ],
   externals: {
     jquery: 'jQuery'
   },
   plugins: [
-    new webpack.ProvidePlugin ({
+    new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery'
     })
@@ -25,9 +25,10 @@ module.exports = {
     modulesDirectories: [
       'node_modules',
       './app/components',
+      './app/api'
     ],
     alias: {
-      applicationStyles: 'app/styles/app.scss',
+      applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -43,7 +44,6 @@ module.exports = {
       }
     ]
   },
-
   sassLoader: {
     includePaths: [
       path.resolve(__dirname, './node_modules/foundation-sites/scss')
