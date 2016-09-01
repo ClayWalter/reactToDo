@@ -10,7 +10,7 @@ var TodoApp = React.createClass({
   getInitialState: function () {
     return {
       showCompleted: false,
-      searchTexdt: '',
+      searchText: '',
       todos: TodoAPI.getTodos()
     };
   },
